@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .dropbtn {
+      background-color: #04AA6D;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #a56d6d;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #7594b8;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #3e8e41;
+    }
+  </style>
+ 
+</head>
+
+<body style="background-color: rgb(209, 209, 238)" leftmargin="250"  >
+
+  <div class="dropdown">
+    <button class="dropbtn">Transactions</button>
+    <div class="dropdown-content">
+      <a href="/cashreceipt">Cash Receipt</a>
+      <a href="/cashpayment">Cash Payment</a>
+      <a href="/bankreceipt">Bank Receipt</a>
+      <a href="/bankpayment">Bank Payment</a>
+      <a href="/journal">Journal</a>
+    </div>
+  </div>
+    <div class="dropdown">
+    <button class="dropbtn">Reports</button>
+    <div class="dropdown-content">
+      <a href="/cashbook">Cash Register</a>
+      <a href="/bankbook">Bank Register</a>
+      <a href="/jreport">Journal Register</a>
+      <a href="/ledger">Ledger</a>
+
+      <a href="/daybook">Day Book</a>
+      <a href="/trial">Trial balance</a>
+      <a href="/profitloss">Profit & Loss</a>
+      <a href="/balancesheet">Balance Sheet</a>
+
+    </div>
+  </div>
+    <div class="dropdown">
+    <button class="dropbtn">Masters</button>
+    <div class="dropdown-content">
+      <a href="/ledgerhead">Ledger Heads</a>
+      <a href="/sdebtors">Sundry Debtors</a>
+      <a href="/screditors">Sundry Creditors</a>
+    </div>
+  </div>
+    <div class="dropdown">
+    <button class="dropbtn">Others</button>
+    <div class="dropdown-content">
+      <a href="#">Customers Contact Details</a>
+      
+    </div>
+  </div>
+
+    
+</body>
+
+</html>

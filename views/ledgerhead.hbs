@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Head of account</title>
+</head>
+<body ml-5>
+    <form action="/views/ledgerhead" method="POST" enctype="multipart/form-data" >   
+    <!--  We’ve added the enctype form attribute and set it to "multipart/form-data". 
+    This is needed to correctly post the file data contained in the file input field.
+    -->
+    
+        <div class="container">
+            <h1 style="margin-left: 150px;" >ACCOUNT HEAD </h1>
+            <hr>
+            <div class="container2">    
+                <button style="margin-left:45px; width:20%" onclick="" >ADD</button> 
+                <button style="margin-left:55px; width:20%"  >UPDATE</button>
+                <button style="margin-left:55px; width:20%" >DELETE</button>
+            </div>
+            <hr>
+            <div style="margin-left: 15px;">
+                <input style="width: 400px;px" type="text" name="accountname" placeholder="Account Name" >
+              
+                
+                <input type="text" name="amount" placeholder="Amount" >
+            <!--
+            <input type="text" name="dbcr" placeholder="Debit/Credit" >
+            <br>
+            <br> 
+            <input type="file"  name= "Image" accept="image/*" />
+            <label for="dbcr">Debit/Credit</label>
+    <input type="text" name="grouphead" placeholder="Group Hhead" >
+
+            -->
+                <select name="dbcr" id="decr">
+                    <option value="dr">Debit</option>
+                    <option value="cr">Credit</option>
+                </select>
+               <br>
+                <br>
+            
+
+                          <select name="grouphead" id="decr">
+                    <option value="dr">Expenses</option>
+                    <option value="Cr">Income</option>
+
+                    <option value="dr">Liabilities</option>
+                    <option value="Cr">Assets</option>
+                    
+                </select>
+            </div>    
+            <br>
+            <hr>
+            <div>
+               
+               <input type="submit" value="Submit form">
+
+
+            </div>    
+            <hr>
+        </div> 
+    </form>
+</body>
+</html>
