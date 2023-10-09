@@ -5,6 +5,16 @@ module.exports={
         db.get().collection('masters').insertOne(masters).then((data)=>{
             callback(data.ops[0])  
         })
+
+
+    },
+        getAllProduct:()=>{
+            return new Promise(async(resolve,reject)=>{               
+                let masters= await db.get().collection(collection.PRODUCT_COLLECTION).find().toArray()
+                resolve(masters)
+            })
+
+
+
     }
 }
-

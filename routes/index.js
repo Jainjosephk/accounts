@@ -1,5 +1,8 @@
 var express = require('express');
 const productHelpers = require('../helpers/product-helpers');
+const productHelpers1 = require('../helpers/product-helpers');
+
+
 var router = express.Router();
 
 /* GET home page. */
@@ -32,9 +35,17 @@ router.get('/jreport', (req,res)=>{
   res.render('../views/jreport'); // compulsory  required ../views
 });
 router.get('/ledgerhead', (req,res)=>{
-  
-  res.render('../views/ledgerhead'); // compulsory  required ../views
+  productHelpers1.getAllProduct().then((masters)=>{
+    res.render('../views/ledgerhead',{masters} ); 
+  })
+
+
+
+
 });
+   
+
+
 router.get('/daybook', (req,res)=>{
   res.render('../views/daybook'); // compulsory  required ../views
 });
@@ -57,12 +68,15 @@ router.get('/screditors', (req,res)=>{
   res.render('../views/screditors'); // compulsory  required ../views
 })
 
-router.post('/views/ledgerhead',(req,res)=>{
-  console.log(req.body)
-  productHelpers.ledgerhead(req.body,(result)=>{
-    res.render('../views/ledgerhead')
+router.post ('/views/ledgerhead',(req,res)=> {
+  productHelpers.ledgerhead (req.body,(result)=> {
+    productHelpers1.getAllProduct().then ((masters)=> {
+      res.render('../views/ledgerhead',{masters} ); 
+   })
   })
-})
+})   
+
+
 
 
 module.exports = router;

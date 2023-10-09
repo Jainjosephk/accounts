@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,25 +40,36 @@
                     <option value="dr">Debit</option>
                     <option value="cr">Credit</option>
                 </select>
-               <br>
                 <br>
-            
-
-                          <select name="grouphead" id="decr">
+                <br>
+                <!--
+                <select name="grouphead" id="decr">
                     <option value="dr">Expenses</option>
                     <option value="Cr">Income</option>
-
                     <option value="dr">Liabilities</option>
                     <option value="Cr">Assets</option>
-                    
                 </select>
+                -->
+                <div>   
+                                            
+                   
+                   <select name="grouphead" id="decr">
+                        
+                        {{#each masters}} 
+                            <option value="dr">{{ this.accountname}}</option>
+                        {{/each}}  
+                     </select>
+                 </div>
+               
+    
             </div>    
             <br>
             <hr>
             <div>
                
                <input type="submit" value="Submit form">
-
+                
+                <button onclick="window.close()"></button>
 
             </div>    
             <hr>
